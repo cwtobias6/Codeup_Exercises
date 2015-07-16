@@ -25,10 +25,13 @@ $books = array(
 
 
 foreach ($books as $title => $bookinfo) {
+	if($bookinfo['published'] > 1950) {
 		echo "\n{$title}\n";
 		foreach ($bookinfo as $detail => $value) {
-			echo " $detail: $value \n";
+			echo "$detail: $value \n";
 		}
+		echo "=====================";
+	}
 }
 
 ?>

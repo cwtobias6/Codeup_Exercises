@@ -2,14 +2,14 @@
 
 
 
-function add($a, $b)
+function add($a,$b)
 {
 	if(errorCheck($a,$b)){
 		return $a + $b;
 	}
 }
 
-function subtract($a, $b)
+function subtract($a,$b)
 {
 	if (errorCheck($a,$b)) {
     	return $a - $b;
@@ -17,14 +17,14 @@ function subtract($a, $b)
 
 }
 
-function multiply($a, $b)
+function multiply($a,$b)
 {
 	if(errorCheck($a,$b)) {
 		return $a * $b;
 	}
 }
 
-function divide($a, $b)
+function divide($a,$b)
 {
 	if(errorCheck($a,$b)) {
     	if($b == 0){
