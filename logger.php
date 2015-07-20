@@ -13,7 +13,16 @@ function logMessage($logLevel, $message)
 	fclose($handle);
 }
 
+function loginfo($message){
+	logMessage("INFO", $message);
+	
+};
+function logerror($message){
+	logMessage("ERROR", $message);
+};
 
 
-logMessage("INFO", "This is an info message.");
-logMessage("ERROR", "This is an error message.");
+loginfo("Hello and Welcome");
+logerror("This is an error");
+
+
