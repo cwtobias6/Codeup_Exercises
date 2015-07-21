@@ -55,4 +55,6 @@ foreach ($companies as $company => $peeps) {
 
 }
 
+arsort($companies);
+
 print_r($companies);
