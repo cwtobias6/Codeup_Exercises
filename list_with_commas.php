@@ -1,7 +1,7 @@
  <?php
 
  // Converts array into list n1, n2, ..., and n3
- function humanizedList($array, $sort =false) {
+ function humanizedList($array, $sort=false) {
  	if ($sort) {
  		asort($array);
  		$position = count($array) - 1;
