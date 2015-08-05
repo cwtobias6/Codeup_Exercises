@@ -35,16 +35,20 @@ class Log
 		fclose($this->handle);
 	}
 	protected function setFilename($prefix) 
-	{
+	{	
+		if(touch($this->filename) && is_writable($this->filename)){
 
-		if(is_string($prefix)) {
-			$this->prefix = $prefix;
-			$newDay = date("Y-m-d");
-			$this->filename = $this->prefix . "-" . $newDay . ".log";
+			if(is_string($prefix)) {
+				$this->prefix = $prefix;
+				$newDay = date("Y-m-d");
+				$this->filename = $this->prefix . "-" . $newDay . ".log";
 
-		} else {
-			exit("cannot open file");
+			} else {
+				exit("cannot open file");
+			}
 		}
+
+	}
 
 	public function __destruct()
 	{
@@ -53,7 +57,7 @@ class Log
 		}
 	}
 
-	}
+	
 
 }
 
