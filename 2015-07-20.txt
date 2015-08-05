@@ -1,0 +1,13 @@
+
+2015-07-20 15:10:07
+2015-07-20 15:10:07
+2015-07-20 15:11:56This is an info message.
+2015-07-20 15:11:56This is an error message.
+2015-07-20 15:12:39 INFO This is an info message.
+2015-07-20 15:12:39 ERROR This is an error message.
+2015-07-20 15:12:44 INFO This is an info message.
+2015-07-20 15:12:44 ERROR This is an error message.
+2015-07-20 15:15:52 INFO This is an info message.
+2015-07-20 15:15:52 ERROR This is an error message.
+2015-07-20 15:20:57 INFO Hello
+2015-07-20 15:20:57 ERROR THis is an error
