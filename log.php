@@ -3,17 +3,18 @@
 class Log
 {
 
-	public $filename;
-	public $handle;
+	private $filename;
+	private $handle;
 
 
 	public function __construct($prefix = 'log') {
-		$newDay = date("Y-m-d");
-		$this->filename = $prefix . "-" . $newDay . ".log";
+		
+		$this->filename = $this->setFilename($prefix);
 		$this->handle = fopen($this->filename, 'a');
+
+
 	}
 
-	
 	public function logMessage($logLevel, $message)
 	{
 		$newLog = date('Y-m-d H:i:s');
@@ -32,6 +33,26 @@ class Log
 
 	public function __destruct(){
 		fclose($this->handle);
+	}
+	protected function setFilename($prefix) 
+	{
+
+		if(is_string($prefix)) {
+			$this->prefix = $prefix;
+			$newDay = date("Y-m-d");
+			$this->filename = $this->prefix . "-" . $newDay . ".log";
+
+		} else {
+			exit("cannot open file");
+		}
+
+	public function __destruct()
+	{
+		if(isset($this->handle)){
+			fclose($this->handle);
+		}
+	}
+
 	}
 
 }
